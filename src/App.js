@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // import HomePage from "./views/HomePage.js";
 import LoginPage from "./views/LoginPage.js";
 import RegisterPage from "./views/RegisterPage.js";
+import ForgotPassword from "./views/forgotPasssword.js";
 // import AuthLoading from './views/AuthLoading';
 import { Provider } from "react-redux";
 // import ProtectedRoute from './views/ProtectedRoute'; 
@@ -20,8 +21,9 @@ function App() {
         <Header />
         <Switch>
           {/* <ProtectedRoute exact component={BookingHistory} path="/bookings" permit={"rider,admin,driver"} /> */}
-          {/* <Route path="/" component={LoginPage} /> */}
-          <Route path="/register" component={RegisterPage} />
+          <Route exact path="/" component={ForgotPassword} />
+          <Route exact path="/login" component={LoginPage} />
+          <Route exact path="/register" component={RegisterPage} />
         </Switch>
         <Footer/>
       </BrowserRouter>
