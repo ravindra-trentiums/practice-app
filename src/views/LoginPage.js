@@ -3,6 +3,7 @@ import fb from "../assets/logo/fb.png"
 import bgImage from "../assets/img/thumbnail.svg"
 import twitter from "../assets/logo/twitter.png"
 import linkedin from "../assets/logo/linkedin.webp"
+import Sidebar from "../containers/sidebar"
 
 function LoginPage() {
     const initialState = {
@@ -23,17 +24,12 @@ function LoginPage() {
 
     return (
         <div className="login-page">
-            
             <div className="login-container">
-                <div className="login-image mt-4 " >
-                    <div className="vertical">
-                        <img width="350" src={bgImage}></img>
-                    </div>
-                </div>
+                <Sidebar />
                 <div className="login-form">
                     <div className="signin-block">
                         <div className="signin-option">
-                            <div style={{  justifyContent: 'center' }}>
+                            <div style={{ justifyContent: 'center' }}>
                                 Sign in with
                         </div>
                             <div >
@@ -44,7 +40,7 @@ function LoginPage() {
                         </div>
                         <div className="line-container mt-0" >
                             <hr width="45%" color="E8E8E8" align="left"></hr>
-                                or  
+                                or
                             <hr width="45%" color="E8E8E8" align="right"></hr>
                         </div>
                     </div>
@@ -95,7 +91,7 @@ function LoginPage() {
                     </div>
                 </div>
             </div>
-             </div>
+        </div>
     )
 }
 

@@ -2,6 +2,7 @@ import React, { useMemo, useEffect, useState } from 'react'
 import bgImage from "../assets/img/thumbnail.svg"
 import 'react-phone-input-2/lib/style.css'
 import PhoneInput from 'react-phone-input-2'
+import Sidebar from "../containers/sidebar"
 function RegisterPage() {
     const initialState = {
         fields: {},
@@ -26,11 +27,7 @@ function RegisterPage() {
     return (
         <div className="login-page">
             <div className="login-container">
-                <div className="login-image mt-4 " >
-                    <div className="vertical">
-                        <img width="350" src={bgImage}></img>
-                    </div>
-                </div>
+                <Sidebar />
                 <div className="login-form">
                     <div className="signin-form">
                         <h4 style={{ textAlign: "center" }}>Create your Account </h4>
@@ -96,9 +93,9 @@ function RegisterPage() {
                                             country={"in"}
                                             value={registerDetails?.fields?.phone || ''}
                                             onChange={(e) => handleChange(e, 'phone')}
-                                            containerStyle={{border: "3px solid rgb(233, 231, 231)",borderRadius: "25px"}}
-                                            inputStyle={{ width:"100%" , borderRadius: "25px"}}
-                                            buttonStyle={{borderRadius: "25px"}}
+                                            containerStyle={{ border: "3px solid rgb(233, 231, 231)", borderRadius: "25px" }}
+                                            inputStyle={{ width: "100%", borderRadius: "25px" }}
+                                            buttonStyle={{ borderRadius: "25px" }}
                                             autoFormat={false}
                                             required
                                         />
