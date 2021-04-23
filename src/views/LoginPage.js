@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import fb from "../assets/logo/fb.png"
-import bgImage from "../assets/img/thumbnail.svg"
 import twitter from "../assets/logo/twitter.png"
 import linkedin from "../assets/logo/linkedin.webp"
 import Sidebar from "../containers/sidebar"
